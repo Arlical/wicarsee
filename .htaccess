@@ -1,0 +1,29 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule ^(home)$ index.php?EX=$1 [L]
+RewriteRule ^(terms)$ index.php?EX=$1 [L]
+RewriteRule ^(notice)$ index.php?EX=$1 [L]
+RewriteRule ^(cookie)$ index.php?EX=$1 [L]
+RewriteRule ^(policy)$ index.php?EX=$1 [L]
+
+RewriteRule ^(adverts)$ advert.php?EX=$1 [L]
+RewriteRule ^(advert)-([0-9]+)$ advert.php?EX=$1&ADVERT_ID=$2 [L]
+RewriteRule ^(paginationAdverts)-([0-9]+)$ advert.php?EX=$1&PAGE=$2 [L]
+RewriteRule ^(formAdvert)$ advert.php?EX=$1 [L]
+RewriteRule ^(actionAdvert)$ advert.php?EX=$1 [L]
+RewriteRule ^(insertAdvert)$ advert.php?EX=$1 [L]
+RewriteRule ^(updateAdvert)-([0-9]+)-([0-9]+)$ advert.php?EX=$1&ADVERT_ID=$2&VEHICLE_ID=$3 [L]
+
+RewriteRule ^(formLogin)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(login)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(forgotPassword)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(sendMail)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(formResetPassword)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(resetPassword)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(logout)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(formAdvertiser)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(insertAdvertiser)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(profile)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(deleteAdvertiser)$ advertiser.php?EX=$1 [L]
+RewriteRule ^(updateAdvertiser)-([0-9]+)-(individual|compagny)$ advertiser.php?EX=$1&ADVERTISER_ID=$2&TYPE=$3 [L]

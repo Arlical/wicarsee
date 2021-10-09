@@ -1,0 +1,23 @@
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "C:\wamp64\www\wicarsee\php\admin\.htpasswd"
+Require valid-user
+
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule ^(home)$ index.php?EX=$1 [L]
+RewriteRule ^(formAdmin)$ index.php?EX=$1 [L]
+RewriteRule ^(adminAdvertiser)$ index.php?EX=$1 [L]
+RewriteRule ^(adminAdvert)$ index.php?EX=$1 [L]
+RewriteRule ^(insertAdmin)$ index.php?EX=$1 [L]
+RewriteRule ^(profile)$ index.php?EX=$1 [L]
+RewriteRule ^(logout)$ index.php?EX=$1 [L]
+RewriteRule ^(login)$ index.php?EX=$1 [L]
+RewriteRule ^(formLogin)$ index.php?EX=$1 [L]
+RewriteRule ^(deleteAdmin)-([0-9]+)$ index.php?EX=$1&ADMIN_ID=$2 [L]
+RewriteRule ^(deleteAdvertiser)-([0-9]+)$ index.php?EX=$1&ADVERTISER_ID=$2 [L]
+RewriteRule ^(deleteAdvert)-([0-9]+)$ index.php?EX=$1&ADVERT_ID=$2 [L]
+RewriteRule ^(insertAdmin)$ index.php?EX=$1 [L]
+RewriteRule ^(actionAdmin)$ index.php?EX=$1 [L]
+RewriteRule ^(editAdmin)$ index.php?EX=$1 [L]
